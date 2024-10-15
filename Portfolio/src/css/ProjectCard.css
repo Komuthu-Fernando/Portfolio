@@ -1,0 +1,73 @@
+.project-card-container {
+    margin-bottom: 4rem;
+}
+.project-card {
+    width: 45vw;
+    height: 450px;
+    background-color: #0E0E0E; 
+    border-radius: 10px;
+    border: 1px solid #333333;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    transition: background-color 0.8s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .project-card .logo-container {
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .project-card .logo {
+    width: 200px;
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .project-card.hovered .logo {
+    transform: scale(1.2); /* Enlarge the logo */
+  }
+  
+  .project-card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .project-card p {
+    font-size: 0.9rem;
+  }
+  
+  .project-card .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: -1;
+  }
+  
+  .project-card.hovered .background-image {
+    opacity: 1; 
+  }
+  
+  .project-card.hovered {
+    background-color: transparent; 
+  }
+  
+  .title {
+    margin-top: 1.5rem;
+  }
+
+  .year {
+    color: #999999;
+    font-size: small;
+    margin-left: 2rem;
+  }

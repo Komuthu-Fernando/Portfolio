@@ -1,0 +1,52 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    background-image: url('../assets/black-1839731.png');
+    background-size: contain;
+    gap: 1rem;
+  }
+  
+  .contact-button {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-heading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+  }
+  
+  .contact-subheading {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #D9D9D9;
+  }
+  
+  .contact-action {
+    text-align: center;
+  }
+  
+  .contact-book {
+    background-color: #00000000;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    border: 1px solid #999999;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    transition: background-color 0.9s ease;
+  }
+  
+  .contact-action p {
+    color: #D9D9D9;
+  }
+  
+  .contact-book:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }

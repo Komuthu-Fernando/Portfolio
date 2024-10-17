@@ -1,25 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
-import Projects from './screens/Projects';
 import Navbar from './components/Navbar';
-import ScrollbarComponent from './components/Scrollbar';
-import CustomCursor from './components/CustomCursor';
+import Footer from './components/Footer';
 
 function App() {
 	return (
-		<>
-			<ScrollbarComponent >
-			<Router>
-				<Navbar />
-				{/* <CustomCursor /> */}
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/projects" element={<Projects />} />
-					{/* Define other routes for Portfolio, About, Work, etc. */}
-				</Routes>
-			</Router>
-			</ScrollbarComponent>
-		</>
+		<Router>
+			<Navbar />
+			<Routes>
+				<Route path="/" element={<Home />} />
+			</Routes>
+			<Footer />
+		</Router>
 	);
 }
 

@@ -42,12 +42,14 @@
     color: #fff;
     border: 2px solid #999999;
     border-width: 1px;
-    padding: 0.7rem 2rem;
-    border-radius: 20px;
+    padding: 1rem 2rem;
+    border-radius: 40px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.9s ease;
     margin-top: 2rem;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
+    overflow: hidden;
     
   }
   
@@ -55,11 +57,27 @@
     color: #000;
     background-color: #ffffff;
   }
+
+  .arrow-icon {
+    display: inline-block;
+    margin-left: 0.2rem;
+  }
+
+  .email-button:hover .arrow-icon {
+    transform: translate(20px, -20px);
+    transition: transform 0.3s ease-in-out;
+  }
   
 
   .project-container {
     margin-top: 5rem;
     margin-bottom: 5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .aboutus-container {
+    margin-top: 15rem;
     margin-left: 2rem;
     margin-right: 2rem;
   }

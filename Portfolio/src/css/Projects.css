@@ -1,22 +1,22 @@
 .project-text {
-	background-color: #1e1e1e;
-	padding: 0.6rem;
-	border-radius: 2rem;
-	font-size: 1rem;
-	border: 1px solid #333333;
-	margin-bottom: 1rem;
-	margin-left: 45%;
-	margin-right: 45%;
-	align-items: center;
-	color: #fff;
-    margin-bottom: 3rem;
+	background-color: #1E1E1E;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    border: 1px solid #333333;  
+    color: white;
+}
+
+.project-div {
+	margin-bottom: 2rem;
 }
 
 .project-heading {
 	color: white;
 	text-align: center;
 	font-weight: normal;
-	font-size: 2.5rem;
+	font-size: 3rem;
+	margin-top: 2rem;
     
 }
 

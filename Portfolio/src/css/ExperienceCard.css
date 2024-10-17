@@ -1,0 +1,28 @@
+.experience-container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.experience-card {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin-bottom: 3rem;
+}
+
+.company {
+    margin-right: 2rem;
+}
+
+.period {
+    color: #999999;
+    font-size: small;
+}
+
+.description-section p {
+    color: #999999;
+    text-align: justify;
+}
+
+.divider {
+    border: 1px solid #999999;
+}

@@ -3,6 +3,7 @@ import Home from './screens/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Error from './screens/Error';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 				<Route path="*" element={<Error />} />
 			</Routes>
 			<Footer />
+			<Analytics />
 		</Router>
 	);
 }

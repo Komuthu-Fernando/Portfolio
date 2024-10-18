@@ -5,7 +5,7 @@
     justify-content: center;
     min-height: 100vh;
     color: #fff;
-    background-image: url('../assets/black-1839731.webp');
+    background-image: url('../assets/black-1839731.png');
     background-size: contain;
     gap: 1rem;
   }
@@ -59,7 +59,7 @@
    
 @media (max-width: 479px) {
   .contact-container {
-    min-height: 50vh;
+    min-height: 100vh;
     background-size: cover;
     gap: 2rem;
   }

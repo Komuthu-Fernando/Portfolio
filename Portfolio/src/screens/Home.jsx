@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* Hero Section */}
+      
       <div className="home-container" id="/">
         <motion.div
           className="hero-section"
@@ -37,6 +37,7 @@ const Home = () => {
           >
             Full Stack Developer <span className="title-sub">& Designer crafting innovative solutions</span>
           </motion.h1>
+          <a href="mailto:komuthuapsara@gmail.com">
           <motion.button
             className="email-button"
             initial={{ opacity: 0, y: 50 }}
@@ -45,22 +46,14 @@ const Home = () => {
             whileHover="hover"
           >
             Email Me{" "}
-            <motion.span
-              className="arrow-icon"
-              variants={{
-                initial: { x: 0, y: 0 },
-                hover: { x: 5, y: -5 },
-              }}
-              transition={{ type: "tween", duration: 0.3 }}
-            >
               <FontAwesomeIcon icon={faLocationArrow} />
-            </motion.span>
           </motion.button>
+          </a>
         </motion.div>
       </div>
 
-      {/* Projects Section */}
-      <div className="project-container" id="work" ref={projectsRef}>
+      <div id="work"></div>
+      <div className="project-container" ref={projectsRef}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={projectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -70,7 +63,7 @@ const Home = () => {
         </motion.div>
       </div>
 
-      {/* About Section */}
+      
       <div className="aboutus-container" id="about" ref={aboutRef}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -81,7 +74,7 @@ const Home = () => {
         </motion.div>
       </div>
 
-      {/* Contact Section */}
+      
       <div id="contact" ref={contactRef}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}

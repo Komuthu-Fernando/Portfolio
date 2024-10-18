@@ -1,25 +1,37 @@
-import { Link } from 'react-scroll'; 
+import { useState } from 'react';
+import { Link } from 'react-scroll';
 import '../css/Navbar.css';
-import icon from '../assets/komuthu.png';
+import icon from '../assets/komuthu.webp';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <nav className="navbar">
-      <ul className="nav-links">
-        <li>
-          <Link to="/" smooth={true} duration={500}>
-            <div className="image-div">
-              <img src={icon} alt="icon" />
-              <span>Komuthu Fernando</span>
-            </div>
-          </Link>
-        </li>
-      </ul>
-      <ul className="nav-links">
-        <li><Link to="/" smooth={true} duration={500}>Portfolio</Link></li>
-        <li><Link to="work" smooth={true} duration={500}>Work</Link></li>
-        <li><Link to="about" smooth={true} duration={500}>About</Link></li>
-        <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+    <nav className={`navbar ${isOpen ? 'active' : ''}`}>
+      <div className="nav-header">
+        <div className="image-div">
+          <img src={icon} alt="icon" />
+          <span>Komuthu Fernando</span>
+        </div>
+        <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+      </div>
+      <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+        <li><Link to="/" smooth={true} duration={500} onClick={closeMenu}>Portfolio</Link></li>
+        <li><Link to="work" smooth={true} duration={500} onClick={closeMenu}>Work</Link></li>
+        <li><Link to="about" smooth={true} duration={500} onClick={closeMenu}>About</Link></li>
+        <li><Link to="contact" smooth={true} duration={500} onClick={closeMenu}>Contact</Link></li>
       </ul>
     </nav>
   );

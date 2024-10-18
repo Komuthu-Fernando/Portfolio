@@ -1,5 +1,5 @@
 import '../css/Footer.css';
-import icon from '../assets/komuthu.png';
+import icon from '../assets/komuthu.webp';
 
 const Footer = () => {
 	return (
@@ -13,7 +13,7 @@ const Footer = () => {
 					<p>
 						Full Stack Developer <br /> & Designer
 					</p>
-					<p>komuthuapsara@gmail.com</p>
+					<p><a href="mailto:komuthuapsara@gmail.com" className='a-tag'>komuthuapsara@gmail.com</a></p>
 				</div>
 
 				<div className="footer-right">
@@ -28,13 +28,13 @@ const Footer = () => {
 							<a href="#about">Contact</a>
 						</li>
 						<li>
-							<a href="#contact">Book a call</a>
+							<a href="https://cal.com/komuthu-fernando-i8aank">Book a call</a>
 						</li>
 					</ul>
 					<ul className="nav-links-footer">
 						<li>
 							<a
-								href="https://www.linkedin.com"
+								href="https://www.linkedin.com/in/komuthu-fernando/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -43,17 +43,24 @@ const Footer = () => {
 						</li>
 						<li>
 							<a
-								href="https://www.instagram.com"
+								href="https://www.instagram.com/koma.__/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
 								Instagram
 							</a>
 						</li>
+						<li>
+							<a
+								href="mailto:sparkhausdigital@gmail.com"
+							>
+								Sparkhaus
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
-			<div className="footer-line"></div>
+			<hr className="footer-line" />
 		</footer>
 	);
 };

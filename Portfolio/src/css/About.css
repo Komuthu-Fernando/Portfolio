@@ -25,7 +25,7 @@
     border: 1px solid #555;
     border-radius: 10px;
     place-self: center;
-    background-image: url('../assets/komuthu1.jpg');
+    background-image: url('../assets/komuthu1.webp');
     background-size: cover;
   }
 
@@ -68,7 +68,6 @@
     font-size: 1rem;
   }
   
-  /* Career Section */
   .career-section {
     margin-top: 10rem;
     margin-bottom: 10rem;
@@ -84,3 +83,72 @@
   }
   
  
+@media (max-width: 479px) {
+  .about-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 450px;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .career-section { 
+    margin-top: 6rem;
+  }
+
+  .career-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .about-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-image {
+    width: 50%;
+    height: 400px;
+    place-self: start;
+  }
+
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .career-section { 
+    margin-top: 6rem;
+  }
+
+  .career-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-image {
+    width: 100%;
+    height: 600px;
+  }
+}
+
+

@@ -2,21 +2,21 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import ProjectCard from '../components/ProjectCard';
 
-import freshLogoColor from '../assets/freshlyy-logo-color.png';
-import freshLogoAsh from '../assets/freshlyy-logo-ash.png';
-import freshImage from '../assets/freshlyy-project-image.png';
+import freshLogoColor from '../assets/freshlyy-logo-color.webp';
+import freshLogoAsh from '../assets/freshlyy-logo-ash.webp';
+import freshImage from '../assets/freshlyy-project-image.webp';
 
-import esImage from '../assets/es-project-image.png';
+import esImage from '../assets/es-project-image.webp';
 import esLogoColor from '../assets/es-logo-color.webp';
-import esLogoAsh from '../assets/es-logo-ash.png';
+import esLogoAsh from '../assets/es-logo-ash.webp';
 
-import dobImage from '../assets/dob-project-image.png';
-import dobLogoColor from '../assets/dob-logo-color.png';
-import dobLogoAsh from '../assets/dob-logo-ash.png';
+import dobImage from '../assets/dob-project-image.webp';
+import dobLogoColor from '../assets/dob-logo-color.webp';
+import dobLogoAsh from '../assets/dob-logo-ash.webp';
 
-import dcmImage from '../assets/dcm-project-image.png';
-import dcmLogoColor from '../assets/dcm-logo-color.png';
-import dcmLogoAsh from '../assets/dcm-logo-ash.png';
+import dcmImage from '../assets/dcm-project-image.webp';
+import dcmLogoColor from '../assets/dcm-logo-color.webp';
+import dcmLogoAsh from '../assets/dcm-logo-ash.webp';
 
 import '../css/Projects.css';
 
@@ -48,7 +48,7 @@ function Projects() {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       className="project"
-      variants={staggerAnimation} // Stagger animation for children
+      variants={staggerAnimation} 
     >
       <center>
         <motion.div className="project-div" variants={textAnimation}>
@@ -65,7 +65,7 @@ function Projects() {
       </center>
 
       <div className="projects-grid">
-        {/* Project 1 */}
+        
         <motion.div variants={cardAnimation}>
           <ProjectCard
             logo={{ color: esLogoColor, ash: esLogoAsh }}
@@ -75,7 +75,7 @@ function Projects() {
           />
         </motion.div>
 
-        {/* Project 2 */}
+        
         <motion.div variants={cardAnimation}>
           <ProjectCard
             logo={{ color: dobLogoColor, ash: dobLogoAsh }}
@@ -85,23 +85,23 @@ function Projects() {
           />
         </motion.div>
 
-        {/* Project 3 */}
+
         <motion.div variants={cardAnimation}>
           <ProjectCard
             logo={{ color: dcmLogoColor, ash: dcmLogoAsh }}
-            title="Data Collection Manager Application"
+            title="DCM Desktop Application"
             year="2024"
-            image={dcmImage} // Replace with actual project image
+            image={dcmImage} 
           />
         </motion.div>
 
-        {/* Project 4 */}
+        
         <motion.div variants={cardAnimation}>
           <ProjectCard
             logo={{ color: freshLogoColor, ash: freshLogoAsh }}
             title="Freshlyy Mobile App"
             year="2023"
-            image={freshImage} // Replace with actual project image
+            image={freshImage} 
           />
         </motion.div>
       </div>

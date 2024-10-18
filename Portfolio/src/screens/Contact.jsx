@@ -33,12 +33,13 @@ const Contact = () => {
       variants={container}
       className="contact-container"
     >
+      
       <motion.div className="contact-button" variants={textAnimation}>
         <div>
           <span className="about-title">Contact</span>
         </div>
       </motion.div>
-
+      <div className='content-container'>
       <motion.h1 className="contact-heading" variants={textAnimation}>
         <span className="title-color">Let's Get in</span> Touch
       </motion.h1>
@@ -51,8 +52,9 @@ const Contact = () => {
         <a href="https://cal.com/komuthu-fernando-i8aank" target="_blank" rel="noopener noreferrer">
           <button className="contact-book">Book a Call</button>
         </a>
-        <p>or email komuthuapsara@gmail.com</p>
+        <p>or email <a href="mailto:komuthuapsara@gmail.com" className='a-tag'>komuthuapsara@gmail.com</a></p>
       </motion.div>
+      </div>
     </motion.div>
   );
 };

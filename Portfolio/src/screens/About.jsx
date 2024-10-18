@@ -42,7 +42,7 @@ const About = () => {
 			className="about-container"
 			variants={staggerAnimation}
 		>
-			{/* About Section */}
+			
 			<section className="about-section">
 				<motion.div
 					className="about-image"
@@ -66,7 +66,7 @@ const About = () => {
 				</motion.div>
 			</section>
 
-			{/* Horizontal Scrolling Bar Section */}
+			
 			<section className="horizontal-bar-section">
 				<div className="horizontal-bar">
 					<motion.div
@@ -103,7 +103,7 @@ const About = () => {
 				</div>
 			</section>
 
-			{/* Career Section */}
+			
 			<section className="career-section">
 				<motion.div className="career-intro" variants={textAnimation}>
 					<span className="about-title">Career</span>
@@ -115,17 +115,17 @@ const About = () => {
 					<ExperienceCard
 						company="Sparkhaus"
 						period="2024-Present"
-						description="As a freelance architect, I worked on a range of residential and commercial projects, balancing form and function. I collaborated with clients and contractors to transform concepts into reality, ensuring each design was both aesthetically pleasing and structurally sound."
+						description="Co-founded Sparkhaus, a social media marketing agency (SMMA) focused on providing small and middle-scale businesses with a dynamic digital presence. Sparkhaus helps brands establish their online arena through tailored marketing strategies and creative solutions."
 					/>
 					<ExperienceCard
 						company="Earndeck Shipping"
 						period="2024-Present"
-						description="As a freelance architect, I worked on a range of residential and commercial projects, balancing form and function. I collaborated with clients and contractors to transform concepts into reality, ensuring each design was both aesthetically pleasing and structurally sound."
+						description="Serving as an IT Specialist at Earndeck Shipping, a maritime survey company, I manage the company’s website and oversee the IT operations to ensure smooth functionality and digital efficiency in support of their business needs."
 					/>
 					<ExperienceCard
 						company="Zebra Technologies"
 						period="2023-2024"
-						description="As a freelance architect, I worked on a range of residential and commercial projects, balancing form and function. I collaborated with clients and contractors to transform concepts into reality, ensuring each design was both aesthetically pleasing and structurally sound."
+						description="As a Software Engineering Intern at Zebra Technologies, I worked on developing innovative software solutions. My responsibilities included designing and implementing applications, such as a desktop database management tool and an augmented reality (AR) application, while collaborating with global teams."
 					/>
 				</motion.div>
 			</section>

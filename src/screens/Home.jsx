@@ -19,9 +19,33 @@ const Home = () => {
 		triggerOnce: true,
 	});
 
+	const getRandomPosition = (axis) => {
+		// Random positions between -30% to 130% of the viewport to ensure the element moves freely beyond the screen edges
+		return Math.random() * (130 - -30) + -30 + '%';
+	  };
+
+	  const floatingCircleVariants = {
+		animate: {
+		  x: [getRandomPosition('x'), getRandomPosition('x'), getRandomPosition('x')],
+		  y: [getRandomPosition('y'), getRandomPosition('y'), getRandomPosition('y')],
+		  transition: {
+			duration: 20, // Slower movement to float across the screen
+			repeat: Infinity, // Infinite loop
+			repeatType: "mirror", // Make the movement smooth (back and forth)
+			ease: "easeInOut", // Smooth transitions
+		  },
+		},
+	  };
+
 	return (
 		<div>
 			<div className="home-container" id="/">
+			<motion.div
+          className="floating-circle"
+          variants={floatingCircleVariants}
+          initial="initial"
+          animate="animate"
+        />
 				<motion.div
 					className="hero-section"
 					ref={heroRef}

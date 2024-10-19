@@ -30,7 +30,7 @@ const Home = () => {
 					transition={{ duration: 0.8 }}
 				>
 					<div>
-						<span className="about-title">Hello, I'm Komuthu 👋</span>
+						<span className="home-title">Hello, I'm Komuthu <span className="wave">👋</span></span>
 					</div>
 					<motion.h1
 						className="title"
@@ -44,6 +44,7 @@ const Home = () => {
 						</span>
 					</motion.h1>
 
+					<a href="mailto:komuthuapsara@gmail.com" className="a-tag">
 					<motion.button
 						className="email-button"
 						initial={{ opacity: 0, y: 50 }}
@@ -51,10 +52,11 @@ const Home = () => {
 						transition={{ delay: 0.6, duration: 0.8 }}
 						whileHover="hover"
 					>
-						<a href="mailto:komuthuapsara@gmail.com" className="a-tag">
+						
 							Email Me <FontAwesomeIcon icon={faLocationArrow} />
-						</a>
+						
 					</motion.button>
+					</a>
 				</motion.div>
 			</div>
 

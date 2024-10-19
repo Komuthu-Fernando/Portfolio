@@ -52,7 +52,7 @@ const Contact = () => {
         <a href="https://cal.com/komuthu-fernando-i8aank" target="_blank" rel="noopener noreferrer">
           <button className="contact-book">Book a Call</button>
         </a>
-        <p>or email <a href="mailto:komuthuapsara@gmail.com" className='a-tag'>komuthuapsara@gmail.com</a></p>
+        <p>or email <a href="mailto:komuthuapsara@gmail.com" className='ac-tag'>komuthuapsara@gmail.com</a></p>
       </motion.div>
       </div>
     </motion.div>

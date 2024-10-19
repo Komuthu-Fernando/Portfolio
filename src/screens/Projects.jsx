@@ -21,100 +21,110 @@ import dcmLogoAsh from '../assets/dcm-logo-ash.webp';
 import '../css/Projects.css';
 
 function Projects() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
 
-  const textAnimation = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-  };
+	// Create a separate ref for the paragraph
+	const paragraphRef = useRef(null);
+	const isParagraphInView = useInView(paragraphRef, { once: true });
 
-  const cardAnimation = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: 'linear' } },
-  };
+	const textAnimation = {
+		hidden: { opacity: 0, y: 50 },
+		visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+	};
 
-  const staggerAnimation = {
-    visible: {
-      transition: {
-        staggerChildren: 0.3, 
-      },
-    },
-  };
+	const cardAnimation = {
+		hidden: { opacity: 0, scale: 0.9 },
+		visible: {
+			opacity: 1,
+			scale: 1,
+			transition: { duration: 0.8, ease: 'linear' },
+		},
+	};
 
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      className="project"
-      variants={staggerAnimation} 
-    >
-      <center>
-        <motion.div className="project-div" variants={textAnimation}>
-          <div>
-            <span className="project-text">Work</span>
-          </div>
-        </motion.div>
-      </center>
+	const staggerAnimation = {
+		visible: {
+			transition: {
+				staggerChildren: 0.3,
+			},
+		},
+	};
 
-      <center>
-        <motion.span className="project-heading" variants={textAnimation}>
-          <span className="title-color">My Latest</span> Projects
-        </motion.span>
-      </center>
+	return (
+		<motion.div
+			ref={ref}
+			initial="hidden"
+			animate={isInView ? 'visible' : 'hidden'}
+			className="project"
+			variants={staggerAnimation}
+		>
+			<div className='project-heading-div'>
+				<motion.div className="project-div" variants={textAnimation}>
+					<div>
+						<span className="about-title">Portfolio</span>
+					</div>
+				</motion.div>
 
-      <div className="projects-grid">
-        
-        <motion.div variants={cardAnimation}>
-          <ProjectCard
-            logo={{ color: esLogoColor, ash: esLogoAsh }}
-            title="Earndeck Shipping Website"
-            year="2024"
-            image={esImage}
-          />
-        </motion.div>
+				<motion.span className="project-heading" variants={textAnimation}>
+					<span className="title-color">My Latest</span> Projects
+				</motion.span>
+			</div>
 
-        
-        <motion.div variants={cardAnimation}>
-          <ProjectCard
-            logo={{ color: dobLogoColor, ash: dobLogoAsh }}
-            title="Doctor of Bat Website"
-            year="2024"
-            image={dobImage}
-          />
-        </motion.div>
+			<div className="projects-grid">
+				<motion.div variants={cardAnimation}>
+					<ProjectCard
+						logo={{ color: esLogoColor, ash: esLogoAsh }}
+						title="Earndeck Shipping Website"
+						year="2024"
+						image={esImage}
+					/>
+				</motion.div>
 
+				<motion.div variants={cardAnimation}>
+					<ProjectCard
+						logo={{ color: dobLogoColor, ash: dobLogoAsh }}
+						title="Doctor of Bat Website"
+						year="2024"
+						image={dobImage}
+					/>
+				</motion.div>
 
-        <motion.div variants={cardAnimation}>
-          <ProjectCard
-            logo={{ color: dcmLogoColor, ash: dcmLogoAsh }}
-            title="DCM Desktop Application"
-            year="2024"
-            image={dcmImage} 
-          />
-        </motion.div>
+				<motion.div variants={cardAnimation}>
+					<ProjectCard
+						logo={{ color: dcmLogoColor, ash: dcmLogoAsh }}
+						title="DCM Desktop Application"
+						year="2024"
+						image={dcmImage}
+					/>
+				</motion.div>
 
-        
-        <motion.div variants={cardAnimation}>
-          <ProjectCard
-            logo={{ color: freshLogoColor, ash: freshLogoAsh }}
-            title="Freshlyy Mobile App"
-            year="2023"
-            image={freshImage} 
-          />
-        </motion.div>
-      </div>
+				<motion.div variants={cardAnimation}>
+					<ProjectCard
+						logo={{ color: freshLogoColor, ash: freshLogoAsh }}
+						title="Freshlyy Mobile App"
+						year="2023"
+						image={freshImage}
+					/>
+				</motion.div>
+			</div>
 
-      <center>
-        <motion.div className="project-paragraph" variants={textAnimation}>
-          Building tech solutions that not only work seamlessly{' '}
-          <span className="title-color">but deliver real impact. With my skills, we ensure success for everyone. Let's scale your</span>{' '}
-          vision to new heights!
-        </motion.div>
-      </center>
-    </motion.div>
-  );
+			<center>
+				<motion.div
+					className="project-paragraph"
+					ref={paragraphRef} 
+					initial="hidden"
+					animate={isParagraphInView ? 'visible' : 'hidden'} 
+					variants={textAnimation}
+				>
+					Building tech solutions that work seamlessly{' '}
+					<span className="title-color">
+					and deliver real impact. With expertise in development and innovation, success is guaranteed for your projects. Let's scale your
+					</span>{' '}
+					vision to new heights!
+				</motion.div>
+			</center>
+		</motion.div>
+	);
 }
 
 export default Projects;

@@ -12,7 +12,7 @@
   position: sticky;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.6s ease;
 }
 
 .navbar.active {
@@ -23,6 +23,7 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .image-div img {
@@ -40,7 +41,7 @@
   list-style: none;
   display: flex;
   gap: 2rem;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.8s ease;
 }
 
 .nav-links a {
@@ -108,7 +109,7 @@
     background-color: #0E0E0E;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.3rem;
     max-height: 0;
     overflow: hidden;
   }

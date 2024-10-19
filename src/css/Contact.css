@@ -18,6 +18,7 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: normal;
+    text-align: center;
   }
   
   .contact-subheading {
@@ -55,7 +56,24 @@
   .a-tag {
     text-decoration: none;
     color: #D9D9D9;
+    transition: color 0.3 ease-in-out;
   }
+
+  .a-tag:hover {
+    color: #0E0E0E;
+  }
+
+  .ac-tag {
+    text-decoration: none;
+    color: #D9D9D9;
+    transition: color 0.3 ease-in-out;
+  }
+
+  .ac-tag:hover {
+    color: #ffffff;
+  }
+
+
    
 @media (max-width: 479px) {
   .contact-container {
@@ -80,6 +98,10 @@
   .contact-book {
     padding: 0.8rem 2rem;
     font-size: 1rem;
+  }
+
+  .a-tag {
+    place-self: center;
   }
 
 }

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import '../css/Contact.css';
 
@@ -49,9 +50,9 @@ const Error = () => {
       </motion.p>
 
       <motion.div className="contact-action" variants={textAnimation}>
-        <a href="/">
+      <Link to="/">
           <button className="contact-book">Go to homepage</button>
-        </a>
+      </Link>
       </motion.div>
       </div>
     </motion.div>

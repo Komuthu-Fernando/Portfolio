@@ -115,7 +115,7 @@ const About = () => {
 					<ExperienceCard
 						company="Sparkhaus"
 						period="2024-Present"
-						description="Co-founded Sparkhaus, a social media marketing agency (SMMA) focused on providing small and middle-scale businesses with a dynamic digital presence. Sparkhaus helps brands establish their online arena through tailored marketing strategies and creative solutions."
+						description="Co-founded Sparkhaus, a Digital Services Agency focused on providing small and middle-scale businesses with a dynamic digital presence. Sparkhaus helps brands establish their online arena through tailored marketing strategies and creative solutions."
 					/>
 					<ExperienceCard
 						company="Earndeck Shipping"

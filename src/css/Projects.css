@@ -7,8 +7,13 @@
     color: white;
 }
 
+.project-heading-div {
+	display: flex;
+	flex-direction: column;
+}
+
 .project-div {
-	margin-bottom: 2rem;
+	place-self: center;
 }
 
 .project-heading {
@@ -67,7 +72,13 @@
 		font-size: small;
 	}
 
+	.project-div {
+		place-self: start;
+	}
+	
+
 	.project-heading{
+		place-self: start;
 		font-size: 2rem;
 	}
 

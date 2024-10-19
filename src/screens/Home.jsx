@@ -6,7 +6,8 @@ import Projects from '../screens/Projects';
 import About from './About';
 import Contact from './Contact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
+import { faLocationArrow } from '@fortawesome/free-solid-svg-icons'
+
 
 const Home = () => {
 	useEffect(() => {
@@ -30,40 +31,11 @@ const Home = () => {
 		triggerOnce: true,
 	});
 
-	const getRandomPosition = (axis) => {
-		return Math.random() * (130 - -30) + -30 + '%';
-	};
-
-	const floatingCircleVariants = {
-		animate: {
-			x: [
-				getRandomPosition('x'),
-				getRandomPosition('x'),
-				getRandomPosition('x'),
-			],
-			y: [
-				getRandomPosition('y'),
-				getRandomPosition('y'),
-				getRandomPosition('y'),
-			],
-			transition: {
-				duration: 20,
-				repeat: Infinity,
-				repeatType: 'mirror',
-				ease: 'easeInOut',
-			},
-		},
-	};
 
 	return (
 		<div>
 			<div className="home-container" id="/">
-				<motion.div
-					className="floating-circle"
-					variants={floatingCircleVariants}
-					initial="initial"
-					animate="animate"
-				/>
+				
 				<motion.div
 					className="hero-section"
 					ref={heroRef}
@@ -71,6 +43,7 @@ const Home = () => {
 					animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
 					transition={{ duration: 0.8 }}
 				>
+					
 					<div>
 						<span className="home-title">
 							Hello, I'm Komuthu <span className="wave">👋</span>
@@ -87,7 +60,7 @@ const Home = () => {
 							& Designer crafting innovative solutions
 						</span>
 					</motion.h1>
-
+					<center>
 					<a href="mailto:komuthuapsara@gmail.com" className="a-tag">
 						<motion.button
 							className="email-button"
@@ -101,6 +74,7 @@ const Home = () => {
 							Email Me <FontAwesomeIcon icon={faLocationArrow} />
 						</motion.button>
 					</a>
+					</center>
 				</motion.div>
 			</div>
 

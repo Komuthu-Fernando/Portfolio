@@ -33,6 +33,7 @@ const Home = () => {
 	return (
 		<div>
 			<div className="home-container" id="/">
+				<div className='glow-container'>
 				<motion.div
 					className="glowing-particle"
 					animate={{
@@ -46,7 +47,7 @@ const Home = () => {
 						repeatType: 'mirror',
 					}}
 				/>
-
+</div>
 				<motion.div
 					className="hero-section"
 					ref={heroRef}

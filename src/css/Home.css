@@ -25,6 +25,10 @@
   overflow-x: hidden;
 }
 
+.glow-container {
+	overflow-x: hidden;
+}
+
 
 @keyframes randomMovement {
 	0% {

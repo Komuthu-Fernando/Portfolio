@@ -9,10 +9,45 @@
 	padding: 0;
 	padding-left: 5rem;
 	padding-right: 5rem;
-	overflow: hidden;
-	position: relative;
+	overflow-x: hidden;
+
 }
 
+.glowing-particle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.615), rgba(255, 255, 255, 0));
+  border-radius: 10%;
+  filter: blur(60px); 
+  opacity: 0.5;
+  pointer-events: none;
+  overflow-x: hidden;
+}
+
+
+@keyframes randomMovement {
+	0% {
+	  transform: translate(0, 0);
+	}
+	25% {
+	  transform: translate(30vw, 20vh);
+	}
+	50% {
+	  transform: translate(-40vw, 70vh);
+	}
+	75% {
+	  transform: translate(30vw, -40vh);
+	}
+	100% {
+	  transform: translate(0, 0);
+	}
+  }
+  
+
+.glowing-particle {
+  animation: randomMovement 30s infinite alternate ease-in-out;
+}
 
 .hero-section {
 	text-align: center;
@@ -28,10 +63,10 @@
 	border: 1px solid #333333;  
 	color: white;
 	display: inline-block; 
+
   }
   
   .home-title .wave {
-	display: inline-block;
 	font-size: 1rem;
 	animation: wave 2s ease-in-out infinite;
 	transform-origin: 70% 70%; 
@@ -105,17 +140,12 @@
 }
 
 @media (max-width: 479px) {
-	.floating-circle { 
-		width: 500px;
-		height: 500px;
-	}
 	.home-container {
 		padding: 0;
 		padding: 4rem;
 		padding: 4rem;
 		padding: 2rem;
-		min-height: 70vh;
-		background-image: none;
+		min-height: 80vh;
 	}
 
 	.about-title {
@@ -141,7 +171,7 @@
 		justify-content: center;
 		place-self: center;
 		padding: 0.8rem 1rem;
-		max-width: 30vw;
+		max-width: 40vw;
 		margin-top: 1rem;
 	}
 

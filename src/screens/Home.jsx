@@ -6,15 +6,14 @@ import Projects from '../screens/Projects';
 import About from './About';
 import Contact from './Contact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationArrow } from '@fortawesome/free-solid-svg-icons'
-
+import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
 	useEffect(() => {
 		const handleScrollToTop = () => {
 			setTimeout(() => {
 				window.scrollTo(0, 0);
-			}, 100); 
+			}, 100);
 		};
 
 		handleScrollToTop();
@@ -31,11 +30,23 @@ const Home = () => {
 		triggerOnce: true,
 	});
 
-
 	return (
 		<div>
 			<div className="home-container" id="/">
-				
+				<motion.div
+					className="glowing-particle"
+					animate={{
+						x: ['0%', '100%', '-100%', '50%', '-50%'],
+						y: ['0%', '-100%', '50%', '-50%', '100%'],
+					}}
+					transition={{
+						duration: 15,
+						ease: 'easeInOut',
+						repeat: Infinity,
+						repeatType: 'mirror',
+					}}
+				/>
+
 				<motion.div
 					className="hero-section"
 					ref={heroRef}
@@ -43,7 +54,6 @@ const Home = () => {
 					animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
 					transition={{ duration: 0.8 }}
 				>
-					
 					<div>
 						<span className="home-title">
 							Hello, I'm Komuthu <span className="wave">👋</span>
@@ -61,19 +71,19 @@ const Home = () => {
 						</span>
 					</motion.h1>
 					<center>
-					<a href="mailto:komuthuapsara@gmail.com" className="a-tag">
-						<motion.button
-							className="email-button"
-							initial={{ opacity: 0, y: 50 }}
-							animate={
-								heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
-							}
-							transition={{ delay: 0.6, duration: 0.8 }}
-							whileHover="hover"
-						>
-							Email Me <FontAwesomeIcon icon={faLocationArrow} />
-						</motion.button>
-					</a>
+						<a href="mailto:komuthuapsara@gmail.com" className="a-tag">
+							<motion.button
+								className="email-button"
+								initial={{ opacity: 0, y: 50 }}
+								animate={
+									heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+								}
+								transition={{ delay: 0.6, duration: 0.8 }}
+								whileHover="hover"
+							>
+								Email Me <FontAwesomeIcon icon={faLocationArrow} />
+							</motion.button>
+						</a>
 					</center>
 				</motion.div>
 			</div>

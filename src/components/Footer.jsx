@@ -13,7 +13,7 @@ const Footer = () => {
 					<p>
 						Full Stack Developer <br /> & Designer
 					</p>
-					<p><a href="mailto:komuthuapsara@gmail.com" className='a-tag'>komuthuapsara@gmail.com</a></p>
+					<p><a href="mailto:komuthuapsara@gmail.com" className='ac-tag'>komuthuapsara@gmail.com</a></p>
 				</div>
 
 				<div className="footer-right">

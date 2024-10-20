@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
       </div>
       <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-        <li><Link to="portfolio" smooth={true} duration={500} onClick={closeMenu}>Work</Link></li>
+        <li><Link to="portfolio" smooth={true} duration={500} onClick={closeMenu}>Portfolio</Link></li>
         <li><Link to="about" smooth={true} duration={500} onClick={closeMenu}>About</Link></li>
         <li><Link to="contact" smooth={true} duration={500} onClick={closeMenu}>Contact</Link></li>
       </ul>
